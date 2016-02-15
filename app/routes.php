@@ -44,4 +44,6 @@ Route::get('profile','RegistrationController@profile');
 Route::group(array('before'=>'auth'), function()
 {
 	Route::get('logout',array('uses'=>'RegistrationController@logout'));
+	Route::get('tambah','CrudController@tambahdata');
+	Route::post('tambah','CrudController@store');
 });
